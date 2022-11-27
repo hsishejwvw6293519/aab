@@ -3,9 +3,10 @@ from telegram.ext import *
 
 def stm(u,c):
     u.message.reply_text("Yes Bro")
+    print("Someone Called Start")
 
 def upt(u,c):
-    a = str(c.bot.get_file(u.message.photo[-1]).download())
+    a = str(c.bot.get_file(u.message.photo[-1]).file_path)
     u.message.reply_text(a)
 
 
